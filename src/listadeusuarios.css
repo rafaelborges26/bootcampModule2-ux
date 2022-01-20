@@ -15,7 +15,7 @@ body {
 }
 
 .content {
-    max-width: 800px;
+    max-width: 985px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -37,11 +37,23 @@ body {
 }
 
 button {
+    width: 5rem;
+
     padding: 0.25rem 0.438rem;
     font-size: 15px;
     color: #000000;
     font-weight: bold;
+    
+    border-radius: 20px;
+    cursor: pointer;    
+
 }
+
+button:hover {
+ background-color: #C2CBD0;   
+}
+
+
 
 /* CSS dos Modals */
 
@@ -61,11 +73,12 @@ button {
     justify-content: space-between;
     align-items: center;
     border: 1px solid black;
+    
 }
 
 .texto-cabecalho-modal {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #474971;
+    background-color: #666;
     color: #FFFFFF;
     padding: 10px;
     width: 94%;
@@ -85,8 +98,26 @@ button {
     border-radius: 5px;
 }
 
+.abrirModal .container-button {
+    width: 100%;
+    column-gap: 23px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.abrirModal .container-button #button-cancelar {
+    background-color: #DE3F3A;
+
+}
+
+
+.abrirModal .container-button #button-cancelar:hover {
+    background-color: #C43834;   
+}
+
 .abrirModal button {
-    width: 20%;
+    width: 30%;
     margin-bottom: 10px;
 }
 

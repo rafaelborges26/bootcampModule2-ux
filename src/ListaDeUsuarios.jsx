@@ -48,6 +48,12 @@ const abrirModalPagar = (name) => {
     setPegarUsuario(name)
 }
 
+const fecharModalPagar = () => {
+    setAbrirPagamento("none")
+    setPegarUsuario("")
+}
+
+
 // Função que abre o modal de recibo de pagamento 
 const abrirModalPagou = () => {
     if (valorDinheiro === "") {
@@ -104,7 +110,10 @@ const valorInput = (event) => {
                 <option value="1">Cartão com final {cards[0].card_number.substr(-4)}</option>
                 <option value="2">Cartão com final {cards[1].card_number.substr(-4)}</option>
                 </select>
+                <div className="container-button">
+                <button id="button-cancelar" onClick={fecharModalPagar}>Cancelar</button>
                 <button onClick={()=>{abrirModalPagou ()}}>Pagar</button>
+                </div>
             </div>  
 
             {/*------------------------------Abrir Modal de recibo de pagamento--------------------------------*/}

@@ -68,3 +68,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Melhorias de ux implementadas:
+
+Adicionado no botão Pagar border-radius para ficar mais arredondado, aumento um pouco da largura, ponteiro do cursor ativo e hover.
+Dentro do modal de pagamento adicionei o botão de Cancelar pois o usuário pode mudar de ideia. Com o botão vermelho. 
+Alterado a cor de fundo do cabeçalho do modal de pagamento para nao ficar a mesma cor do backgound da pagina
+Aumentar um pouco do modal para o desktop
+aumentei um pouuco o max-width da página para separar um pouco mais o conteudo do usuário da parte de pagar
+
+
