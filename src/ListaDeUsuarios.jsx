@@ -85,7 +85,13 @@ const valorInput = (event) => {
 
 // Renderizando na tela as informações recebidas da API 
     return (
-        <>
+        <div>
+        <header>
+            <h3>
+            Lista de usuários
+            </h3>
+        </header>
+        
             {infos.map(item => (
                 <div className="container" key={item.index}>
                     <div className="content">
@@ -122,7 +128,7 @@ const valorInput = (event) => {
                 <p>O Pagamento <b>{abrirNaoRecebeu}</b> foi concluído com sucesso</p>
                 <button onClick={()=>{fecharModal()}}>Fechar</button>
             </div>
-        </>
+        </div>
     )
 }
 
