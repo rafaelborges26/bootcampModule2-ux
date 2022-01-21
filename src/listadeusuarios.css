@@ -12,14 +12,23 @@ body {
     margin-top: 0.063rem;
     align-items: center;
     padding: 1.25rem;
+    box-shadow: 0px 0px 16px black;
 }
 
+
 .content {
-    max-width: 985px;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0px;
+    box-shadow: #000000;
+}
+
+.content button {
+        width: 6rem;
+        height: 2.5rem;    
 }
 
 .thumbnail {
@@ -32,6 +41,7 @@ body {
 }
 
 .infos p {
+    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: #FFF;
 }
@@ -54,7 +64,6 @@ button:hover {
 }
 
 
-
 /* CSS dos Modals */
 
 .abrirModal {
@@ -67,18 +76,28 @@ button:hover {
     margin-right: -50%;
     transform: translate(-50%, -50%);
     width: 310px;
-    height: 190px;
+    height: 220px;
     flex-direction: column;
     background-color: white;
     justify-content: space-between;
     align-items: center;
     border: 1px solid black;
     
+    
+}
+
+
+.abrirModal input {
+    width: 50%;
+    height: 22px; 
+    border-radius: 5px;
+    padding: 0 10px;
+
 }
 
 .texto-cabecalho-modal {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: #666;
+    background-color: #554F61;
     color: #FFFFFF;
     padding: 10px;
     width: 94%;
@@ -96,6 +115,8 @@ button:hover {
     width: 57%;
     height: 30px;
     border-radius: 5px;
+    background-color: #fff;
+    padding: 0 10px;
 }
 
 .abrirModal .container-button {
@@ -185,3 +206,31 @@ button:hover {
         font-size: 10px;
     }
 }
+
+@media screen and (min-width: 1200px) {
+ 
+    .content button {
+        width: 8rem;
+        height: 2.5rem;    
+    }
+    
+    .abrirModal {
+        width: 430px;
+        height: 306px;
+
+        
+    }
+
+    .abrirModal input {
+        width: 60%;     width: 66%;
+
+        height: 22px; 
+        
+    }
+
+    .abrirModal select {
+        width: 70%; 
+    }
+
+}
+

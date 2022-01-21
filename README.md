@@ -76,5 +76,10 @@ Dentro do modal de pagamento adicionei o botão de Cancelar pois o usuário pode
 Alterado a cor de fundo do cabeçalho do modal de pagamento para nao ficar a mesma cor do backgound da pagina
 Aumentar um pouco do modal para o desktop
 aumentei um pouuco o max-width da página para separar um pouco mais o conteudo do usuário da parte de pagar
-
+Adicionado padding para dar um espaço mais significante para o container de usuário.
+Adicionado box-shadow preto para deixar mais tonalizado a separação entre cada container de usuário
+Realizado no input do Modal de pagamento para deixar mais agradável visualmente.
+Ajuste no tamanho do input para desktop pois estava muito pequeno, deixando maior para o usuário conseguir ter uma visão melhor
+Ajuste no tamanho do botão pagar para trazer mais visibilidade ao objetivo da tela.
+Alterada a font do texto da página principal da informação do usuário
 
