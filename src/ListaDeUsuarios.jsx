@@ -4,7 +4,7 @@ import './listadeusuarios.css';
 import axios from 'axios';
 
 //Pegando as informações da API pelo GET
-const ListaDeUsuarios = () => {
+export const ListaDeUsuarios = () => {
     const [infos, setInfos] = useState([])
     useEffect(() => {
         axios.get('https://www.mocky.io/v2/5d531c4f2e0000620081ddce', {
@@ -96,17 +96,17 @@ const valorInput = (event) => {
                 <div className="container" key={item.index}>
                     <div className="content">
                         <img className="thumbnail" src={item.img} alt="Foto do usuário" />
-                        <div className="infos">   
+                        <div className="infos" data-testid="buttonPay">   
                             <p>Nome do Usuário: {item.name}</p>
                             <p>ID: {item.id} - Username: {item.username}</p>
                         </div>
-                        <button className="botao-pagar" onClick={()=>{abrirModalPagar(item.name)}}>Pagar</button>
+                        <button onClick={()=>{abrirModalPagar(item.name)}}>Pagar</button>
                     </div>
                 </div>
             ))}
 
             {/*--------------------------------Abrir Modal de pagamento----------------------------------*/}
-            <div className="abrirModal" style={{display: abrirPagamento}}>
+            <div className="abrirModal" style={{display: abrirPagamento}} data-testid="testt">
                 <p className="texto-cabecalho-modal">Pagamento para <span>{pegarUsuario}</span></p>
                 <div className="valorInput">
                 <NumberFormat thousandSeparator={true} value={valorDinheiro} onChange={valorInput} prefix={'R$ '} inputmode="numeric" placeholder="R$ 0,00"/>
@@ -131,5 +131,3 @@ const valorInput = (event) => {
         </div>
     )
 }
-
-export default ListaDeUsuarios
