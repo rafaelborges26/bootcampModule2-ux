@@ -106,7 +106,7 @@ const valorInput = (event) => {
             ))}
 
             {/*--------------------------------Abrir Modal de pagamento----------------------------------*/}
-            <div className="abrirModal" style={{display: abrirPagamento}} data-testid="testt">
+            <div className="abrirModal" style={{display: abrirPagamento}} data-testid="ModalPayment">
                 <p className="texto-cabecalho-modal">Pagamento para <span>{pegarUsuario}</span></p>
                 <div className="valorInput">
                 <NumberFormat thousandSeparator={true} value={valorDinheiro} onChange={valorInput} prefix={'R$ '} inputmode="numeric" placeholder="R$ 0,00"/>
@@ -123,7 +123,7 @@ const valorInput = (event) => {
             </div>  
 
             {/*------------------------------Abrir Modal de recibo de pagamento--------------------------------*/}
-            <div className="abrirModal" style={{display: abrirPagou}}>
+            <div className="abrirModal" style={{display: abrirPagou}} data-testid="ModalFinished" >
                 <p className="texto-cabecalho-modal">Recibo de pagamento</p>
                 <p>O Pagamento <b>{abrirNaoRecebeu}</b> foi concluído com sucesso</p>
                 <button onClick={()=>{fecharModal()}}>Fechar</button>
