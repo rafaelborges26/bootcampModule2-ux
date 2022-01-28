@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { fireEvent, render } from '@testing-library/react'
-import ListaDeUsuarios from './ListaDeUsuarios'
+import {ListaDeUsuarios} from './ListaDeUsuarios'
 
 describe("Testing list of users", () => {
 

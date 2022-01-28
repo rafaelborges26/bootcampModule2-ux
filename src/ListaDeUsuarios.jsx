@@ -131,3 +131,5 @@ const valorInput = (event) => {
         </div>
     )
 }
+
+//export default ListaDeUsuarios
