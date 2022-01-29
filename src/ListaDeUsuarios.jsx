@@ -109,7 +109,7 @@ const valorInput = (event) => {
             <div className="abrirModal" style={{display: abrirPagamento}} data-testid="ModalPayment">
                 <p className="texto-cabecalho-modal">Pagamento para <span>{pegarUsuario}</span></p>
                 <div className="valorInput">
-                <NumberFormat thousandSeparator={true} value={valorDinheiro} onChange={valorInput} prefix={'R$ '} inputmode="numeric" placeholder="R$ 0,00"/>
+                <NumberFormat thousandSeparator={true} value={valorDinheiro} onChange={valorInput} prefix={'R$ '} inputMode="numeric" placeholder="R$ 0,00"/>
                 <p style={{display:validarCampo}}>Campo obrigatório</p>
                 </div>
                 <select value={valorCartao} onChange={escolhaDoCartao}>
