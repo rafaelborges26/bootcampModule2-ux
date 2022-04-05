@@ -1,10 +1,34 @@
 /* CSS da Lista de Usuários para Pagamento */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     width: 100%;
+}
+
+main { 
+    background: #001d3d;
+    width: 100%;
+}
+
+#containerMain {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+}
+
+.containerMain- { 
+    transition: 0.3s;
+}
+
+.containerMain-open {
+    filter: blur(5px) grayscale(50%);
+    pointer-events: none;
+    user-select: none;
 }
 
 header {
@@ -14,29 +38,57 @@ header {
     
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #000000;
+    justify-content: space-between;
+    background-color: #000814;
     color: #fff;
     
 }
 
+header button {
+    width: 110px;
+    background: green;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+
+}
+
+header button:hover {
+    background-color: rgb(6, 100, 6);
+}
+
+header p {
+    font-size: 16px;
+    margin-right: 20px;
+}
+
 .container {
-    background-image: linear-gradient(#31324F, #1F202E);
+    background-image: linear-gradient(#171769, #171769);
     margin-top: 0.063rem;
     align-items: center;
     padding: 1.25rem;
     box-shadow: 0px 0px 16px black;
+    width: 30%;
+    margin-left: 10px;
+    
 }
 
 
 .content {
-    max-width: 1100px;
+    
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
-    box-shadow: #000000;
+    box-shadow: #001d3d;
 }
 
 .content button {
@@ -89,18 +141,50 @@ button:hover {
     margin-right: -50%;
     transform: translate(-50%, -50%);
     width: 310px;
-    height: 220px;
     flex-direction: column;
     background-color: white;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
-    
-    
+    transition: 0.3s;
+    border: 1px solid;
+    border-radius: 35px;
+    border-color: #ffffff;
+    box-shadow: 2px 2px 5px #ccc;
 }
 
+#modalConcluido {
+    background: green;
+}
 
-.abrirModal input {
+#modalNaoConcluido {
+    background: red;
+}
+
+.cabecalho-modal {
+    display: flex;
+    align-items: center;
+    width: inherit;
+    justify-content: center;
+}
+
+.closeModal { 
+    position: absolute;
+    right: 25px;
+
+    cursor: pointer;
+}
+
+.modal-body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-body .abrirModal input {
     width: 50%;
     height: 22px; 
     border-radius: 5px;
@@ -108,7 +192,7 @@ button:hover {
 
 }
 
-.texto-cabecalho-modal {
+.modal-body .texto-cabecalho-modal {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-color: #554F61;
     color: #FFFFFF;
@@ -119,7 +203,7 @@ button:hover {
     font-weight: bold;
 }
 
-.texto-cabecalho-modal span {
+.modal-body .texto-cabecalho-modal span {
     color: #C8D63C;
     font-weight: bold;
 }
@@ -143,6 +227,15 @@ button:hover {
 .abrirModal .container-button #button-cancelar {
     background-color: #DE3F3A;
 
+}
+
+
+.abrirModal .container-button #button-pagar {
+    background-color: rgb(44, 116, 44);
+}
+
+.abrirModal .container-button #button-pagar:hover {
+    background-color: rgb(6, 100, 6);
 }
 
 
@@ -176,7 +269,35 @@ button:hover {
 
 /* Media Queries */
 
+
 @media screen and (max-width: 412px) and (min-width: 391px) {
+
+    header button {
+        width: 70px;
+        font-size: 14px
+    }
+
+    header p {
+        right: 20px;
+        font-size: 10px;
+    }
+
+    .container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .abrirModal {
+        height: 250px;
+    }
+
+    .closeModal { 
+        
+        right: 15px;
+    
+        cursor: pointer;
+    }
+
     .thumbnail {
         width: 75px;
     }
@@ -187,6 +308,33 @@ button:hover {
 }
 
 @media screen and (max-width: 390px) and (min-width: 376px) {
+
+    header button {
+        width: 70px;
+        font-size: 14px
+    }
+
+    header p {
+        right: 20px;
+        font-size: 10px;
+    }
+
+    .container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .abrirModal {
+        height: 250px;
+    }
+
+    .closeModal { 
+        
+        right: 15px;
+    
+        cursor: pointer;
+    }
+
     .thumbnail {
         width: 75px;
     }
@@ -197,6 +345,33 @@ button:hover {
 }
 
 @media screen and (max-width: 375px) and (min-width: 361px) {
+
+    header button {
+        width: 70px;
+        font-size: 14px
+    }
+
+    header p {
+        right: 20px;
+        font-size: 10px;
+    }
+
+    .container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .abrirModal {
+        height: 250px;
+    }
+
+    .closeModal { 
+        
+        right: 15px;
+    
+        cursor: pointer;
+    }
+
     .thumbnail {
         width: 75px;
     }
@@ -207,6 +382,33 @@ button:hover {
 }
 
 @media screen and (max-width: 360px) and (min-width: 280px) {
+
+    header button {
+        width: 70px;
+        font-size: 14px
+    }
+
+    header p {
+        right: 20px;
+        font-size: 10px;
+    }
+
+    .container {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .abrirModal {
+        height: 250px;
+    }
+
+    .closeModal { 
+        
+        right: 15px;
+    
+        cursor: pointer;
+    }
+    
     .thumbnail {
         width: 60px;
     }
@@ -222,6 +424,7 @@ button:hover {
 
 @media screen and (min-width: 1200px) {
  
+
     .content button {
         width: 8rem;
         height: 2.5rem;    
@@ -245,5 +448,34 @@ button:hover {
         width: 70%; 
     }
 
+}
+
+@media screen and (max-width: 1200px) {
+
+    .container {
+        width: 100%;
+        margin-left: 0;
+        padding: 0 20px;
+    }
+
+    .content {
+        justify-content: center;
+    }
+
+    .infos {
+        margin: 0 20px 0 10px;
+    }
+
+
+    .abrirModal {
+        height: 250px;
+    }
+
+    .closeModal { 
+        
+        right: 15px;
+    
+        cursor: pointer;
+    }
 }
 
